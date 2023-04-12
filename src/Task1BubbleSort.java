@@ -22,7 +22,9 @@ public class Task1BubbleSort {
         for (int right = numbers.size(); right > 0; --right) {
             // right - правая граница области поиска (не включая)
             // перебираем все индексы от 0 (включая) до right (не включая)
-            for (int i = 0; i < right; ++i) {
+            //левые индексы могут быть все,кроме последнего
+            //у последнего нету пары
+            for (int i = 0; i < right - 1; ++i) {
                 int first = numbers.get(i);
                 int second = numbers.get(i + 1);
                 if (first > second) {
