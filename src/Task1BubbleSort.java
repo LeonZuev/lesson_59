@@ -15,7 +15,7 @@ public class Task1BubbleSort {
         System.out.println("result: " + numbers);
     }
 
-    // O(n / 2 * (n - 1)) = O(n * 0.5 * (n - 1)) = O(0.5 * n * n - 0.5 * n * 1) =
+    // 1.) O(n / 2 * (n - 1)) = O(n * 0.5 * (n - 1)) = O(0.5 * n * n - 0.5 * n * 1) =
     // = O(0.5 * n^2 - 0.5 * n) = O(0.5 * n^2) = O(n^2) - time
     // O(1) - additional space
     public static void sort(ArrayList<Integer> numbers) {
