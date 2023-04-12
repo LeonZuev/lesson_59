@@ -1,3 +1,7 @@
+import java.util.List;
+
+import static java.io.ObjectInputFilter.merge;
+
 public class Task2MergeSort {
 /*
    сортировка слиянием относится к группе алгоритмов
@@ -9,5 +13,21 @@ public class Task2MergeSort {
    иногда сортировка происходит in-place только внешне - внутри создвётся отсортированная копия,
    которой занимается оригинал
  */
+  public static List<Integer> sort(List<Integer> numbers) {
+    if (numbers.size() < 2) {
+      return numbers;
+    }
 
+    int mid = numbers.size() / 2;
+    List<Integer> left = numbers.subList(0, mid);
+    List<Integer> right = numbers.subList(mid, numbers.size());
+
+    left = sort(left);
+    right = sort(right);
+
+    return merge(left, right);
+  }
+  private static List<Integer> merge(List<Integer> list1, List<Integer> list2) {
+
+  }
 }
